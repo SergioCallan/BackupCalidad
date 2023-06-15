@@ -17,6 +17,8 @@ export default function EliminarVuelo(){
             getVuelos()
         } catch(err){
             console.log(err)
+        } finally{
+            console.log("Tabla actualizada")
         }
     })
     
