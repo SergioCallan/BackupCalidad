@@ -18,11 +18,17 @@ const corsOptions={
 }
 
 const connection ={
-    host: 'localhost',
+    /*host: 'localhost',
     user: 'root',
     port: 3306,
     password: 'admin123',
     database: 'flyeasy'
+    */
+    host: process.env.MYSQL_URL,
+    user: process.env.MYSQL_USERNAME,
+    port: 3306,
+    password: process.env.MYSQL_PASSWORD,
+    database: process.env.MYSQL_DATABASE
   }
 
 
