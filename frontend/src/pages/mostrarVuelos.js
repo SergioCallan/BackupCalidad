@@ -11,11 +11,9 @@ export default function MostrarVuelos(){
         setListavuelos(data)
     }
     useEffect(()=>{
-        try{
-            getVuelos()
-        } catch(err){
-            console.log(err)
-        }
+        getVuelos().catch((error)=>{
+            console.log(error)
+        })  
     })
     const comprobarCambiosID = (event) => {
         setIDVuelo(event.target.value)
