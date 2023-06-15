@@ -62,8 +62,8 @@ export default function MostrarVuelos(){
                         </tr>
                     </thead>
                     <tbody>
-                        {vuelos.map((datos, index)=>(
-                                <tr key={index}>
+                        {vuelos.map((datos)=>(
+                                <tr key={datos}>
                                     <td>{datos.id}</td>
                                     <td>{datos.aerolinea}</td>
                                     <td>{datos.origen}</td>
