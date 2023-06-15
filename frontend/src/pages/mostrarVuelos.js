@@ -62,16 +62,16 @@ export default function MostrarVuelos(){
                         </tr>
                     </thead>
                     <tbody>
-                        {vuelos.map((datos)=>(
-                                <tr>
-                                    <td key={datos.id}>{datos.id}</td>
-                                    <td key={datos.id}>{datos.aerolinea}</td>
-                                    <td key={datos.id}>{datos.origen}</td>
-                                    <td key={datos.id}>{datos.destino}</td>
-                                    <td key={datos.id}>{datos.precio}</td>
-                                    <td key={datos.id}>{datos.cantidad}</td>
-                                    <td key={datos.id}>{datos.fechavuelo}</td>
-                                    <td key={datos.id}>{datos.horasalida}</td>
+                        {vuelos.map((datos, index)=>(
+                                <tr key={index}>
+                                    <td>{datos.id}</td>
+                                    <td>{datos.aerolinea}</td>
+                                    <td>{datos.origen}</td>
+                                    <td>{datos.destino}</td>
+                                    <td>{datos.precio}</td>
+                                    <td>{datos.cantidad}</td>
+                                    <td>{datos.fechavuelo}</td>
+                                    <td>{datos.horasalida}</td>
                                 </tr>
                         ))}
                     </tbody>
