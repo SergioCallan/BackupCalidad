@@ -47,7 +47,8 @@ export default function RegistroVuelo(){
                 id: null
             }
             const url='http://localhost:9000/api/registerflights'
-            const {formData:res}= await axios.post(url, formData)
+            const {response}= await axios.post(url, formData)
+            console.log(response)
             alert("Registro exitoso")
         }catch(error){
             console.error('Error al enviar la solicitud:', error);
