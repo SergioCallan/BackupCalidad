@@ -13,13 +13,9 @@ export default function EliminarVuelo(){
     }
 
     useEffect(()=>{
-        try{
-            getVuelos()
-        } catch(err){
-            console.log(err)
-        } finally{
-            console.log("Tabla actualizada")
-        }
+        getVuelos().catch((error)=>{
+            console.log(error)
+        })
     })
     
     const comprobarCambiosID = (event) => {
