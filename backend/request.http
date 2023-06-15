@@ -1,0 +1,42 @@
+###
+GET http://localhost:9000/api/asd@gmail.com HTTP/1.1
+
+###
+POST http://localhost:9000/api/registeruser HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "admin",
+    "apellido": "admin",
+    "email": "admin@gmail.com",
+    "numero": "123",
+    "contrasena": "admin123"
+}
+
+###
+POST http://localhost:9000/api/reserveflight HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "asd@gmail.com",
+    "aerolinea": "aerolinea",
+    "origen": "asd",
+    "destino": "asd",
+    "fechavuelo": null,
+    "horasalida": null
+}
+
+###
+DELETE http://localhost:9000/api/qwe HTTP/1.1
+
+###
+PUT http://localhost:9000/api/asd HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "asd",
+    "apellido": "zxc",
+    "email": "asd@gmail.com",
+    "numero": "123",
+    "contrasena": "asd"
+}
