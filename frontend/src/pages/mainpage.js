@@ -1,8 +1,9 @@
 import React, {Component} from "react"
 import {Link} from "react-router-dom"
+import "./Estilos/mainpage.css"
 //Importas css
 
-class MainPage extends Component{ //Reemplaza por export default function nombre()
+class MainPage extends Component{
     render(){
         return(
             <body>
@@ -28,4 +29,4 @@ class MainPage extends Component{ //Reemplaza por export default function nombre
     }
 }
 
-export default MainPage //Reemplaza por export default function nombre()
+export default MainPage

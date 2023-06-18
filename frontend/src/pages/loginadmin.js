@@ -21,7 +21,7 @@ export default function Login(){
         const formPassword= password
         if(formEmail==="admin@gmail.com" && formPassword==="admin123"){
             alert("Bienvenido, administrador")
-            navigate("/registrovuelos")
+            navigate("/menuadmin")
         }
         else{
             alert("ACCESO DENEGADO")

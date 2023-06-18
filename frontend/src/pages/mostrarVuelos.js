@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react"
 import axios from "axios"
+import "./Estilos/mostrarVuelos.css"
 //Importas css
 export default function MostrarVuelos(){
     const [idVuelo, setIDVuelo]= useState(null)
@@ -41,7 +42,6 @@ export default function MostrarVuelos(){
         }catch(error){
             console.error('Error al enviar la solicitud:', error);
         }
-        
     }
     
     return (
@@ -57,6 +57,7 @@ export default function MostrarVuelos(){
                             <th>Partida</th>
                             <th>Destino</th>
                             <th>Precio</th>
+                            <th>Asientos disponibles</th>
                             <th>Fecha del vuelo</th>
                             <th>Hora de salida</th>
                         </tr>

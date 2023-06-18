@@ -54,7 +54,7 @@ routes.post("/registeruser", (req, res)=>{
         if(err) return res.send(err)
         conn.query('INSERT INTO users set ?', [req.body], (err, rows)=>{
             if(err) return res.send(err)
-            res.send("Datos guardados")
+            res.send("Datos de usuario guardados")
         })
     })
 })
@@ -64,7 +64,7 @@ routes.post("/registerflights", (req, res)=>{
         if(err) return res.send(err)
         conn.query('INSERT INTO vuelos set ?', [req.body], (err, rows)=>{
             if(err) return res.send(err)
-            res.send("Datos guardados")
+            res.send("Vuelo registrado")
         })
     })
 })
@@ -90,15 +90,28 @@ routes.delete("/deleteflight/:id", (req, res)=>{
     })
 })
 
+//Para las reservas
+
 routes.post("/reserveflight", (req, res)=>{
     req.getConnection((err, conn)=>{
         if(err) return res.send(err)
         conn.query('INSERT INTO reservas set ?', [req.body], (err, rows)=>{
             if(err) return res.send(err)
-            res.send("Datos guardados")
+            res.send("Reserva realizada")
         })
     })
 })
+
+routes.get("/reservasuser/:email", (req, res)=>{
+    req.getConnection((err, conn)=>{
+        if(err) return res.send(err)
+        conn.query('SELECT * FROM reservas WHERE email= ?', [req.params.email], (err, rows)=>{
+            if(err) return res.send(err)
+            res.send(rows)
+        })
+    })
+})
+
 
 //Se usara mas adelante, borrar de ser necesario
 routes.put("/:nombre", (req, res)=>{

@@ -1,6 +1,7 @@
 import React, {useState} from "react"
 import axios from "axios"
 import {Link} from "react-router-dom"
+import "./Estilos/registroVuelo.css"
 //Importas css
 export default function RegistroVuelo(){
     const [aerolinea, setAerolinea]= useState('')

@@ -1,6 +1,7 @@
 import React, {useState} from "react"
 import axios from "axios"
 import {Link, useNavigate} from "react-router-dom"
+import "./Estilos/login.css"
 //Importas css
 
 export default function Login(){
@@ -31,7 +32,7 @@ export default function Login(){
                 if(response2.data.encontrado){
                     alert("Inicio de sesion exitoso")
                     localStorage.setItem("data", formEmail)
-                    navigate("/mostrarvuelos")
+                    navigate("/menuuser")
                 }
             }
             setEmail('');
